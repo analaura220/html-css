@@ -1,2 +1,4 @@
 # html-css
- HTML e CSS Curso em Vídeo
+ HTML e CSS do Curso em Vídeo
+
+ Aprendendo a criar sites e gerenciar repositórios.
