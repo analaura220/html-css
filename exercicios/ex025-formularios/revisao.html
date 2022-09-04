@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão Formulários</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type="number"] {
+            width: 65px;
+        }
+
+        fieldset {
+            margin-bottom: 10px;
+        }
+
+        div.botoes {
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulários</h1>
+    <form action="" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Login</legend>
+            <p>
+                <label for="user">Usuário:</label>
+                <input type="text" name="user" id="user" minlength="5" maxlength="20" required placeholder="Usuário" autocomplete="username">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email">
+            </p>
+            <p>
+                <label for="fone">Telefone:</label>
+                <input type="tel" name="fone" id="fone" required placeholder="(xx) x xxxx-xxxx" autocomplete="tel">
+            </p>
+            <p>
+                <label for="password">Senha:</label>
+                <input type="password" name="password" id="password" placeholder="Senha" autocomplete="current-password">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Demais informações</legend>
+            <p>
+                <label for="dataNasc">Sua data de nascimento:</label>
+                <input type="date" name="dataNasc" id="dataNasc" required>
+            </p>
+            <p>
+                <label for="favNum">Qual seu número favorito?</label>
+                <input type="number" name="favNum" id="favNum" min="0" max="9" placeholder="De 0 a 9">
+            </p>
+            <p>
+                <label for="jantar">Qual horário do seu jantar?</label>
+                <input type="time" name="jantar" id="jantar" required>
+            </p>
+            <p>
+                Seus esportes favoritos:<br>
+                <input type="checkbox" name="fut" id="fut"> <label for="fut">Futebol</label><br>
+                <input type="checkbox" name="nat" id="nat"> <label for="nat">Natação</label><br>
+                <input type="checkbox" name="vol" id="vol"> <label for="vol">Vôlei</label><br>
+                <input type="checkbox" name="ten" id="ten"> <label for="ten">Tênis</label>
+            </p>
+            <p>
+                Sexualidade: <br>
+                <input type="radio" name="sex" id="masc"> <label for="masc">Masculino</label><br>
+                <input type="radio" name="sex" id="fem"> <label for="fem">Feminino</label><br>
+                <input type="radio" name="sex" id="naoBin"> <label for="naoBin">Não binário</label>
+            </p>
+            <p>
+                <label for="favcolor">Sua cor favorita:</label>
+                <input type="color" name="favcolor" id="favcolor">
+            </p>
+            <p>
+                <label for="satis">Nível de satisfação:</label>
+                <input type="range" name="satis" id="satis" min="0" max="10" value="5">
+            </p>
+            <p>
+                <label for="fotoPerfil">Envie uma foto para perfil:</label>
+                <input type="file" name="fotoPerfil" id="fotoPerfil" accept="image/jpeg, image/png">
+            </p>
+            <p>
+                <label for="est">Seu Estado</label>
+                <select name="est" id="est">
+                    <option value="xx" selected>xxx</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                </select>
+            </p>
+            <p>
+                <label for="lista">Profissão:</label>
+                <input type="text" name="lista" id="lista" list="prof">
+                <datalist id="prof">
+                    <option>Administrador</option>
+                    <option>Motorista</option>
+                    <option>Desenvolvedor</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="opnion">Deixe uma opinião sobre o site:</label><br>
+                <textarea name="opnion" id="opnion" cols="30" rows="10"></textarea>
+            </p>
+        </fieldset>
+
+
+        <div class="botoes">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar tudo">
+        </div>
+    </form>
+</body>
+</html>
