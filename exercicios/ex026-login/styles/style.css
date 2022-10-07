@@ -53,6 +53,10 @@ body {
     color: #fff;
 }
 
+.title-secondary {
+    color: #58af9b;
+}
+
 .description {
     font-size: 14px;
     font-weight: 300;
@@ -88,10 +92,14 @@ body {
 
 .second-column {
     flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .list-social-media {
     display: flex;
+    list-style-type: none;
 }
 
 .form {
